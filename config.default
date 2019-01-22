@@ -1,0 +1,41 @@
+[DEFAULT]
+# Notify может быть telegram или email (в зависимости от того, куда хотим отправлять отчеты)
+notify: telegram
+# время ожидания отчета (по дефолту 20 мин.)
+retry_count: 60
+
+[TELEGRAM]
+# Токен бота, котоый будет слать отчеты. https://core.telegram.org/bots#creating-a-new-bot
+# Выглядит примерно так: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+telegram_bot_token: token
+# Настройки SOCKS5. (бывает нужен для Telegram)
+socks5: no
+# адрес proxy-сервера в формате <ip_or_hostname>:<port>
+socks5_address:
+# логин/пароль можно оставить пустыми, если прокси без авторизации
+socks5_login:
+socks5_password:
+
+[SMTP]
+# Использовать mutt для отправки (должен быть заранее настроен)
+mutt = no
+# Логин/пароль для отправки почты
+smtp_login: test@nettools.club
+smtp_passwd: supersecret1234
+# smtp-сервер (smtp.gmail.com, smtp.yandex.ru, etc...
+smtp_server: smtp.gmail.com
+# Порт (465 для SSL или 587 для обычного)
+smtp_port: 465
+
+[CONTACTS]
+# Контакты для отправки отчетов
+email: test@nettools.club
+# Для отправки в телеграм нужен именно id человека или группы, куда будет отправляться отчет
+telegram: userid
+
+[CREDENTIALS]
+#  Название организации
+orgname: TestOrganization
+# Логин/пароль на сайте portal.rfc-revizor.ru
+login: test@isp.org
+password: secret
